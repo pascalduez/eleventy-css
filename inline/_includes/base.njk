@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% set css %}
+      {% include "index.css" %}
+    {% endset %}
+    <style>
+      {{ css | postcss | safe }}
+    </style>
+  </head>
+  <body>
+    {{ content | safe }}
+  </body>
+</html>

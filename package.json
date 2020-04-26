@@ -1,0 +1,15 @@
+{
+  "name": "eleventy-css",
+  "version": "1.0.0",
+  "license": "Unlicense",
+  "private": true,
+  "workspaces": [
+    "inline",
+    "js-template",
+    "external-build",
+    "modules"
+  ],
+  "devDependencies": {
+    "prettier": "^2.0.4"
+  }
+}

@@ -1,0 +1,11 @@
+.Tag {
+  padding-top: 0.2rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.5rem;
+}
+
+.Tag--intentDefault {
+  color: white;
+  background-color: black;
+}
