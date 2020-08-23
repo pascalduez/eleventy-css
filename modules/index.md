@@ -9,9 +9,3 @@ layout: base
 {% Button %}
 Test
 {% endButton %}
-
-### Tag
-
-{% Tag %}
-Test
-{% endTag %}

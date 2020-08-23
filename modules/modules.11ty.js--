@@ -1,9 +1,12 @@
 const path = require('path');
-const { writeFile } = require('fs').promises;
+const { writeFile, readFile } = require('fs').promises;
 const slug = require('unique-slug');
 const glob = require('@modular-css/glob');
 const shortnames = require('@modular-css/shortnames')();
 const cssnano = require('cssnano')();
+
+const { fs, vol } = require('memfs');
+// const { patchRequire } = require('fs-monkey');
 
 const env = process.env.NODE_ENV;
 
@@ -44,6 +47,36 @@ exports.render = async () => {
     JSON.stringify(compositions, null, 2),
     'utf-8'
   );
+
+  console.log(await readFile('modules.json', 'utf-8'));
+
+  // await fs.promises.writeFile(
+  //   '/modules.json',
+  //   JSON.stringify(compositions, null, 2)
+  // );
+
+  // console.log(await fs.promises.readFile('/modules.json', 'utf-8'));
+
+  // vol.fromJSON({ '/modules.json'}, '/app');
+
+  // vol.fromJSON(
+  //   { './modules.json': JSON.stringify(compositions, null, 2) },
+  //   '/'
+  // );
+
+  // const json = {
+  //   './modules.json': JSON.stringify(compositions, null, 2),
+  // };
+  // vol.fromJSON(json, '/');
+
+  // // console.log(vol);
+
+  // console.log(
+  //   // fs.readFileSync('/app/README.md', 'utf8'),
+  //   vol.readFileSync('/modules.json', 'utf8')
+  // );
+
+  // patchRequire(vol);
 
   return result.css;
 };
