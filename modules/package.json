@@ -7,8 +7,8 @@
     "build": "NODE_ENV=production eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@modular-css/glob": "^25.8.0",
+    "@11ty/eleventy": "^0.11.1",
+    "@modular-css/glob": "^25.8.2",
     "@modular-css/shortnames": "^25.0.0",
     "clsx": "^1.1.1",
     "cssnano": "^4.1.10",
